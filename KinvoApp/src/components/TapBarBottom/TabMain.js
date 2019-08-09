@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { View, TouchableOpacity, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Image, Dimensions, StatusBar, Keyboard  } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
 import Animated from 'react-native-reanimated';
 
 import { ResumeScreen, WalletScreen, AccountScreen, AddMoreScreen, PremiumScreen } from '../';
-
+import Styles from '../Styles/TabMainStyle';
 import addIcon from '../../icons/add.png';
 import walletIcon from '../../icons/wallet.png';
 import resumeIcon from '../../icons/resume.png';
-import searchIcon from '../../icons/search.png';
 import premiumIcon from '../../icons/premium.png';
 import accountIcon from '../../icons/account.png';
 
@@ -33,17 +32,19 @@ export default class TabMain extends React.Component {
 
   _renderTabBar = props => {
     const inputRange = props.navigationState.routes.map((x, i) => i);
-
+    let color;
     return (
-      <View style={styles.tabBar}>
+      <View style={Styles.TabStyle.tabBar}>
+        <StatusBar backgroundColor="white" barStyle="light-content" />
         {props.navigationState.routes.map((route, i) => {
+          {this.state.index === i ? color='#f5f8fa' : color = 'white' }
           return (
             <TouchableOpacity
               key={i}
-              style={styles.tabItem}
-              onPress={() => this.setState({ index: i })}>
+              style={[Styles.TabStyle.tabItem, { backgroundColor: color }]}
+              onPress={() => {this.setState({ index: i }); Keyboard.dismiss();} } >
               <Image
-                style={styles.iconTab}
+                style={Styles.TabStyle.iconTab}
                 source={icons[i]}
               />
               <Animated.Text>{route.title}</Animated.Text>
@@ -75,23 +76,3 @@ export default class TabMain extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  tabBar: {
-    flexDirection: 'row',
-  },
-  iconTab: {
-    margin: 2,
-    width: 32,
-    justifyContent: 'center',
-    height: 32,
-  },
-  tabItem: {
-    flex: 1,
-    alignItems: 'center',
-    padding: 16,
-  },
-});
