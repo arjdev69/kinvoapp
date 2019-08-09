@@ -1,27 +1,37 @@
 import * as React from "react"
-import { Animated, TouchableOpacity } from "react-native"
+import { Animated, TouchableOpacity, Image } from "react-native"
 
-import iconAdd from '../../icons/add.png';
+import addIcon from '../../icons/add.png';
 import walletIcon from '../../icons/wallet.png';
 import resumeIcon from '../../icons/resume.png';
 import searchIcon from '../../icons/search.png';
 import premiumIcon from '../../icons/premium.png';
 import accountIcon from '../../icons/account.png';
 
-const Tab = ({ focusAnim, title, onPress }) => {
+const icons = [
+  resumeIcon, walletIcon, addIcon, 
+  premiumIcon, accountIcon
+];
+
+const Tab = ({ focusAnim, title, onPress, index }) => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} style={{
+      flex: 1}}>
       <Animated.View
         style={{
-          padding: 10,
-          borderRadius: 10,
+          flex: 1,
+          padding: 0,
+          borderRadius: 0,
+          alignItems: 'center',
+          justifyContent: 'center',
           backgroundColor: focusAnim.interpolate({
             inputRange: [0, 1],
-            outputRange: ["transparent", "tomato"]
+            outputRange: ["transparent", "#f5f8fab5"]
           })
         }}
       >
-        {title === 'Add' ?
+        <Image source={icons[index]} style={{ height: 64, width: 64 }}/>
+        {/* {title === 'Add' ?
           <Animated.Text
             style={{
               color: focusAnim.interpolate({
@@ -38,7 +48,7 @@ const Tab = ({ focusAnim, title, onPress }) => {
               })
             }}
           >{title}</Animated.Text>
-        }
+        } */}
 
       </Animated.View>
     </TouchableOpacity>

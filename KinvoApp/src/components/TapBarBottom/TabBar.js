@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Text, TouchableOpacity } from "react-native"
+import { View, Text, TouchableOpacity, Image } from "react-native"
 import Tab from "./Tab"
 
 const TabBar = (props) => {
@@ -7,10 +7,8 @@ const TabBar = (props) => {
   return (
     <View style={{
       height: 80,
-      backgroundColor: 'seashell',
+      backgroundColor: 'white',
       flexDirection: "row",
-      justifyContent: 'space-around',
-      alignItems: 'center',
     }}>
       {navigationState.routes.map((route, index) => {
         const focusAnim = position.interpolate({
@@ -22,16 +20,17 @@ const TabBar = (props) => {
             key={index}
             focusAnim={focusAnim}
             title={route.routeName}
+            index={index}
             onPress={() => navigation.navigate(route.routeName)}
           />
         )
       })}
-      <TouchableOpacity onPress={() => {
+      {/* <TouchableOpacity onPress={() => {
         // toggle drawer or dispatch any other arbitrary action
-        alert("You pressed the menu button!")
+        alert()
       }}>
         <Text>🍔</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   )
 }
