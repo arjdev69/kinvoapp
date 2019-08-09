@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { TabView, SceneMap } from 'react-native-tab-view';
-import { View, TouchableOpacity, StyleSheet, Image, Dimensions,Text } from 'react-native';
+import { View, TouchableOpacity, Image, Dimensions,Text, Keyboard } from 'react-native';
 import Animated from 'react-native-reanimated';
 
 import { ProductScreen } from '../';
 import backIcon from '../../icons/back.png';
+import Styles from '../Styles/WalletStyle';
 
 const ExtractScreen = () => (
-  <View style={[styles.scene, { backgroundColor: '#7b858b' }]}><Text>Extrato</Text></View>
+  <View style={[Styles.WalletStyle.scene, { backgroundColor: '#7b858b' }]}><Text>Extrato</Text></View>
 );
 
 const WalletScreen = () => (
-  <View style={[styles.scene, { backgroundColor: '#7b858b' }]}><Text>Carteira</Text></View>
+  <View style={[Styles.WalletStyle.scene, { backgroundColor: '#7b858b' }]}><Text>Carteira</Text></View>
 );
 export default class Wallet extends Component {
 
@@ -28,22 +29,24 @@ export default class Wallet extends Component {
 
   _renderTabBar = props => {
     const inputRange = props.navigationState.routes.map((x, i) => i);
-
+    let color;
     return (
-      <View style={styles.tabBar}>
-        <View>
+      <View style={Styles.WalletStyle.tabBar}>
+        <View style={Styles.WalletStyle.iconViewTab} >
           <Image
-            style={styles.iconTab}
+            style={Styles.WalletStyle.iconTab}
             source={backIcon}
           />
         </View>
         {props.navigationState.routes.map((route, i) => {
+          
+          {this.state.index === i ? color='#f5f8fa' : color = 'white' }
           return (
             <TouchableOpacity
               key={i}
-              style={styles.tabItem}
-              onPress={() => this.setState({ index: i })}>
-              <Animated.Text>{route.title}</Animated.Text>
+              style={[Styles.WalletStyle.tabItem, { backgroundColor: color }]}
+              onPress={() => {this.setState({ index: i }); Keyboard.dismiss();}}>
+              <Animated.Text style={Styles.WalletStyle.tabItemTitle}>{route.title}</Animated.Text>
             </TouchableOpacity>
           );
         })}
@@ -69,28 +72,3 @@ export default class Wallet extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  tabBar: {
-    flexDirection: 'row',
-  },
-  iconTab: {
-    margin: 2,
-    width: 32,
-    justifyContent: 'center',
-    height: 32,
-  },
-  tabItem: {
-    flex: 1,
-    alignItems: 'center',
-    padding: 16,
-  },
-  scene: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-});
