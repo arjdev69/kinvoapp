@@ -1,26 +1,31 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { View, TouchableOpacity, StyleSheet, Image, Dimensions } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
-import { View, TouchableOpacity, StyleSheet, Image, Dimensions,Text } from 'react-native';
 import Animated from 'react-native-reanimated';
 
-import { ProductScreen } from '../';
-import backIcon from '../../icons/back.png';
+import { ResumeScreen, WalletScreen, AccountScreen, AddMoreScreen, PremiumScreen } from '../';
 
-const ExtractScreen = () => (
-  <View style={[styles.scene, { backgroundColor: '#7b858b' }]}><Text>Extrato</Text></View>
-);
+import addIcon from '../../icons/add.png';
+import walletIcon from '../../icons/wallet.png';
+import resumeIcon from '../../icons/resume.png';
+import searchIcon from '../../icons/search.png';
+import premiumIcon from '../../icons/premium.png';
+import accountIcon from '../../icons/account.png';
 
-const WalletScreen = () => (
-  <View style={[styles.scene, { backgroundColor: '#7b858b' }]}><Text>Carteira</Text></View>
-);
-export default class Wallet extends Component {
+const icons = [
+  resumeIcon, walletIcon, addIcon, 
+  premiumIcon, accountIcon
+];
 
+export default class TabMain extends React.Component {
   state = {
     index: 0,
     routes: [
+      { key: 'Resume', title: 'Resumo' },
       { key: 'Wallet', title: 'Carteira' },
-      { key: 'Product', title: 'Produto' },
-      { key: 'Extract', title: 'Extrato' }
+      { key: 'Add', title: '' },
+      { key: 'Premium', title: 'Premium' },
+      { key: 'Account', title: 'Conta' },
     ],
   };
 
@@ -31,18 +36,16 @@ export default class Wallet extends Component {
 
     return (
       <View style={styles.tabBar}>
-        <View>
-          <Image
-            style={styles.iconTab}
-            source={backIcon}
-          />
-        </View>
         {props.navigationState.routes.map((route, i) => {
           return (
             <TouchableOpacity
               key={i}
               style={styles.tabItem}
               onPress={() => this.setState({ index: i })}>
+              <Image
+                style={styles.iconTab}
+                source={icons[i]}
+              />
               <Animated.Text>{route.title}</Animated.Text>
             </TouchableOpacity>
           );
@@ -52,9 +55,11 @@ export default class Wallet extends Component {
   };
 
   _renderScene = SceneMap({
-    Product: ProductScreen,
+    Resume: ResumeScreen,
     Wallet: WalletScreen,
-    Extract: ExtractScreen
+    Add: AddMoreScreen,
+    Premium: PremiumScreen,
+    Account: AccountScreen
   });
 
   render() {
@@ -65,6 +70,7 @@ export default class Wallet extends Component {
         renderTabBar={this._renderTabBar}
         onIndexChange={this._handleIndexChange}
         initialLayout={{ width: Dimensions.get('window').width }}
+        tabBarPosition={'bottom'}
       />
     );
   }
@@ -87,10 +93,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 16,
-  },
-  scene: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
   },
 });
