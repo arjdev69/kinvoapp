@@ -6,7 +6,7 @@ width = width;
 
 const SearchStyle = StyleSheet.create({
     container: {
-        height: (height - (height*0.85)),
+        height: (height - (height*0.88)),
         backgroundColor: '#f5f8fa',
         alignItems: 'center',
         justifyContent: 'center'
