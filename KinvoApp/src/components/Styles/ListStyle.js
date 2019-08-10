@@ -5,14 +5,20 @@ height = height;
 width = width;
 
 const ListStyle = StyleSheet.create({
+    list:{
+        height: (height - (height*0.35))
+    },
     container: {
         flexDirection: 'column',
         backgroundColor: '#FFF',
         justifyContent: 'space-between',
         padding: 10,
+        borderBottomColor: '#f5f5f6',
+        borderBottomWidth: 1
     },
     financialInstitutionName: {
         margin: 0,
+        paddingLeft: 0,
         padding: 5,
     },
     institutionName:{
@@ -33,8 +39,7 @@ const ListStyle = StyleSheet.create({
     },
     divider: {
         width: 8,
-        borderRadius: 20,
-        backgroundColor: '#008DCB'
+        borderRadius: 20
     },
     fieldValuesCoin: {
         flexDirection: 'row',
