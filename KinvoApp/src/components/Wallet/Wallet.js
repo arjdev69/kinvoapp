@@ -8,11 +8,11 @@ import backIcon from '../../icons/back.png';
 import Styles from '../Styles/WalletStyle';
 
 const ExtractScreen = () => (
-  <View style={[Styles.WalletStyle.scene, { backgroundColor: '#7b858b' }]}><Text>Extrato</Text></View>
+  <View style={[Styles.WalletStyle.scene, { backgroundColor: '#f5f8fa' }]}><Text>Extrato</Text></View>
 );
 
 const WalletScreen = () => (
-  <View style={[Styles.WalletStyle.scene, { backgroundColor: '#7b858b' }]}><Text>Carteira</Text></View>
+  <View style={[Styles.WalletStyle.scene, { backgroundColor: '#f5f8fa' }]}><Text>Carteira</Text></View>
 );
 export default class Wallet extends Component {
 
