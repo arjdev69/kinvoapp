@@ -5,8 +5,10 @@ import axios from 'axios'
 import { ListItem } from '../';
 import api from '../../services/api';
 import Styles from '../Styles/ListStyle';
+import { connect } from 'react-redux';
 
-export default class List extends Component {
+import { searchObject } from '../Actions/AuthActions';
+class List extends Component {
     
     state={
         data: []
@@ -22,7 +24,7 @@ export default class List extends Component {
         return (
             <View style={Styles.ListStyle.list}>
                 <ScrollView>
-                    {this.state.data.map((item, i)=>(
+                    {this.state.data.slice(0, this.props.searchKey).map((item, i)=>(
                         <ListItem key={i} item={item}/>
                     ))}
                 </ScrollView>
@@ -30,3 +32,12 @@ export default class List extends Component {
         )
     }
 }
+
+
+const mapStateToProps = state => (
+    {
+        searchKey: state.AuthReducers.searchKey,
+    }
+)
+
+export default connect(mapStateToProps, { searchObject })(List);

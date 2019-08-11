@@ -10,7 +10,7 @@ export default class ListItem extends Component {
             <View style={Styles.ListStyle.container}>
                 <View style={Styles.ListStyle.financialInstitutionName}>
                     <Text style={[Styles.ListStyle.institutionName, {color:colors[this.props.item.productTypeId]}]}>
-                        {this.props.item.financialInstitutionName}
+                       {this.props.item.financialInstitutionName}
                     </Text>
                 </View>
                 <View style={Styles.ListStyle.content}>

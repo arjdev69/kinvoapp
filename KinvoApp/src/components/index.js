@@ -7,3 +7,4 @@ export { default as ProductScreen } from './Product/Product';
 export { default as SearchView } from './Search/Search';
 export { default as ListItem } from './List/ListItem';
 export { default as List } from './List/List';
+export { default as TabMain } from './TabBar/TabMain';

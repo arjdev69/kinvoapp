@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TabMain from './src/components/TapBarBottom/TabMain';
+import Main from './src/Main';
 import { YellowBox} from 'react-native';
 
 YellowBox.ignoreWarnings([
@@ -8,7 +8,7 @@ YellowBox.ignoreWarnings([
 export default class App extends Component {
   render() {
     return (
-        <TabMain />
+        <Main />
     );
   }
 }
