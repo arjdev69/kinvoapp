@@ -47,7 +47,7 @@ export default class TabMain extends React.Component {
                 style={Styles.TabStyle.iconTab}
                 source={icons[i]}
               />
-              <Animated.Text>{route.title}</Animated.Text>
+              {/* <Animated.Text>{route.title}</Animated.Text> */}
             </TouchableOpacity>
           );
         })}
