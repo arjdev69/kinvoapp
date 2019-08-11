@@ -23,11 +23,13 @@ export default class ListItem extends Component {
                     <View style={Styles.ListStyle.fieldValuesCoin}>
                         <View style={Styles.ListStyle.valuesCoin}>
                             <Text style={Styles.ListStyle.titleRevenue}>SALDO ATUAL</Text>
-                            <Text style={[Styles.ListStyle.valueRevenue,{color:colors[this.props.item.productTypeId]}]}>R${this.props.item.equity}</Text>
+                            <Text style={[Styles.ListStyle.valueRevenue,{color:colors[this.props.item.productTypeId]}]}>R${this.props.item.equity.toFixed(2).replace('.', ',')}</Text>
                         </View>
                         <View style={Styles.ListStyle.valuesCoin}>
                             <Text style={[Styles.ListStyle.titleRevenue]}>RENTABILIDADE</Text>
-                            <Text style={[Styles.ListStyle.valueRevenue, {color:colors[this.props.item.productTypeId]}]}>{this.props.item.profitability}%</Text>
+                            <Text style={[Styles.ListStyle.valueRevenue, {color:colors[this.props.item.productTypeId]}]}>
+                                {this.props.item.profitability.toFixed(2).replace('.', ',')}%
+                            </Text>
                         </View>
                     </View>
                 </View>
