@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, TextInput, Image, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { connect } from 'react-redux';
 
-import { searchObject } from '../Actions/AuthActions';
+import { searchObject } from '../Redux/Actions/AuthActions';
 import Styles from '../Styles/SearchStyle';
 import searchIcon from '../../icons/search.png';
 

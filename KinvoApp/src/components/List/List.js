@@ -7,7 +7,7 @@ import api from '../../services/api';
 import Styles from '../Styles/ListStyle';
 import { connect } from 'react-redux';
 
-import { searchObject } from '../Actions/AuthActions';
+import { searchObject } from '../Redux/Actions/AuthActions';
 class List extends Component {
     
     state={
