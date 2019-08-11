@@ -23,19 +23,22 @@ const ListStyle = StyleSheet.create({
     },
     institutionName:{
         color: '#008DCB',
-        fontSize: 16
+        fontSize: 16,
+        fontFamily: 'SF Pro Display Regular'
     },
     content:{
         flexDirection: 'column',
     },
     fieldProductName: {
         flexDirection: 'row',
-        marginBottom: 5
+        marginBottom: 5,
+        fontFamily: 'SF Pro Display Regular'
     },
     productName:{
         fontSize: 18,
         padding: 5,
         color: '#788288',
+        fontFamily: 'SF Pro Display Regular'
     },
     divider: {
         width: 8,
@@ -52,11 +55,13 @@ const ListStyle = StyleSheet.create({
     },
     titleRevenue: {
         fontSize: 14,
-        color: '#788288'
+        color: '#788288',
+        fontFamily: 'SF Pro Display Regular'
     },
     valueRevenue: {
         fontSize: 30,
-        color: '#008DCB'
+        color: '#008DCB',
+        fontFamily: 'SF Pro Display Regular'
     }
 });
 
