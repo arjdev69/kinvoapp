@@ -16,13 +16,12 @@ const WalletStyle = StyleSheet.create({
       },
       iconTab: {
         margin: 2,
-        width: 18,
-        justifyContent: 'center',
-        height: 18,
+        width: 50,
+        height: 50,
       },
       iconViewTab:{
         margin: 0,
-        padding: 20
+        padding: 10
       },
       tabItem: {
         flex: 1,
@@ -34,6 +33,8 @@ const WalletStyle = StyleSheet.create({
       },
       tabItemTitle:{
         color: '#707b81',
+        fontSize: 20,
+        fontFamily: 'SF Pro Display Regular',
       },
       scene: {
         flex: 1,

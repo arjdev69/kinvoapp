@@ -10,17 +10,19 @@ const TabStyle = StyleSheet.create({
       },
       tabBar: {
         flexDirection: 'row',
+        borderTopWidth: 1,
+        borderTopColor: '#f5f5f6'
       },
       iconTab: {
-        margin: 2,
-        width: 32,
-        justifyContent: 'center',
-        height: 32,
+        width: 68,
+        height: 68
       },
       tabItem: {
         flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
         alignItems: 'center',
-        padding: 16,
+        height: 90,
       },
 });
 
