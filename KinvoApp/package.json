@@ -7,11 +7,6 @@
     "test": "jest",
     "lint": "eslint ."
   },
-  "rnpm": {
-    "assets": [
-      "./assets/fonts"
-    ]
-  },
   "dependencies": {
     "axios": "^0.19.0",
     "react": "16.8.6",
