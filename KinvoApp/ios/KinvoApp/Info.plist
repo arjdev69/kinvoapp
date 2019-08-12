@@ -55,7 +55,6 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SFProDisplay-Semibold.ttf</string>
 		<string>SF-Pro-Display-Bold.otf</string>
 		<string>SF-Pro-Display-Regular.otf</string>
 		<string>SF-Pro-Display-Semibold.otf</string>
