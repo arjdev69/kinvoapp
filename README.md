@@ -1,4 +1,4 @@
-![Logo of the project]('https://media.licdn.com/dms/image/C4D0BAQHQziGxRjq9KQ/company-logo_200_200/0?e=2159024400&v=beta&t=IVi0KlQGdPjWpBZU836krX8ot-JaNYDq4R0i2MiS5Pg')
+![Logo of the project]('https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/fa/b5/40/fab5405c-e293-9dde-4f7a-d3f48dc741ce/AppIcon-0-1x_U007emarketing-0-0-85-220-7.png/1200x630wa.png')
 
 # KinvoApp &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-BSD-red.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 > KinvoApp Test Mobile
