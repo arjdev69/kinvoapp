@@ -5,7 +5,7 @@ export default class Premium extends Component {
     render() {
         return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text> Premium </Text>
+                <Text style={{ color: '#707b81',fontSize: 35 }}> Premium </Text>
             </View>
         )
     }

@@ -8,7 +8,7 @@ export default class Account extends Component {
   render() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Account!</Text>
+            <Text style={{ color: '#707b81',fontSize: 35 }}>Account!</Text>
         </View>
     );
   }

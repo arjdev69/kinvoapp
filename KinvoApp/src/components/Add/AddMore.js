@@ -5,7 +5,7 @@ export default class AddMore extends Component {
     render() {
         return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text> AddMore </Text>
+                <Text style={{ color: '#707b81',fontSize: 35 }}> AddMore </Text>
             </View>
         )
     }
