@@ -13,19 +13,20 @@ const ListStyle = StyleSheet.create({
         backgroundColor: '#FFF',
         justifyContent: 'space-between',
         padding: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
         borderBottomColor: '#f5f5f6',
         borderBottomWidth: 1
     },
     financialInstitutionName: {
         margin: 0,
         paddingLeft: 0,
-        padding: 5,
+        padding: 8,
     },
     institutionName:{
         color: '#008DCB',
-        fontSize: 16,
+        fontSize: 14,
         fontFamily: 'SF Pro Display Regular',
-        fontWeight: "bold"
         
     },
     content:{
@@ -34,17 +35,17 @@ const ListStyle = StyleSheet.create({
     fieldProductName: {
         flexDirection: 'row',
         marginBottom: 5,
+        justifyContent: 'flex-start'
     },
     productName:{
-        fontSize: 18,
-        padding: 5,
+        fontSize: 20,
+        paddingLeft: 5,
         color: '#788288',
         fontFamily: 'SF Pro Display Regular',
-        fontWeight: "800"
     },
     divider: {
-        width: 8,
-        borderRadius: 20
+        width: 5,
+        borderRadius: 30
     },
     fieldValuesCoin: {
         flexDirection: 'row',
@@ -53,19 +54,18 @@ const ListStyle = StyleSheet.create({
     },
     valuesCoin: {
         flexDirection: 'column',
-        padding: 5
+        padding: 0
     },
     titleRevenue: {
-        fontSize: 14,
+        fontSize: 12,
         color: '#788288',
-        fontFamily: 'SF Pro Display Regular',
-        
+        fontFamily: 'SF Pro Display Regular',        
     },
     valueRevenue: {
         fontSize: 30,
         color: '#008DCB',
         fontFamily: 'SF Pro Display Regular',
-        fontWeight: "bold"
+        top: -5
     }
 });
 
