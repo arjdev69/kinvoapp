@@ -1,4 +1,4 @@
-![Logo of the project]('https://github.com/arjdev69/kinvo-mobile-test/blob/master/logo.svg')
+![Logo of the project]('https://media.licdn.com/dms/image/C4D0BAQHQziGxRjq9KQ/company-logo_200_200/0?e=2159024400&v=beta&t=IVi0KlQGdPjWpBZU836krX8ot-JaNYDq4R0i2MiS5Pg')
 
 # KinvoApp &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-BSD-red.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 > KinvoApp Test Mobile
@@ -59,7 +59,7 @@ REACT_APP_API_URL=https://e9a02505-3276-4fee-aede-c7023dfb9034.mock.pstmn.io
 REACT_APP_API_KEY=AIzasfghBdscVsddZsBv1EwvZsdscC2G8DpvzC7H83Fw
 
 ...
-REACT_APP...`SO ON`
+REACT_APP...`like this successively`
 ```
 
 ### Deploying / Publishing
